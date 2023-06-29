@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::view('homepage', 'template0_pages/homepage');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
