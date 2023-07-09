@@ -17,16 +17,16 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
             [
-                'product_title' => 'iPhone 13 Pro Max Graphite - 256GB',
+                'product_title' => 'Green Dress',
                 'product_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta reiciendis odio consequuntur sunt magnam eum facilis quaerat dolor aperiam labore facere amet officiis, unde quae distinctio earum culpa omnis soluta voluptate tempora placeat?.',
-                'product_price' => '1199.00',
+                'product_price' => '550.00',
                 'product_quantity' => 100,
-                'product_image1' => 'images/products/iphone1-1.jpg',
+                'product_image1' => 'images/products/Green Dress.jpg',
                 'product_image2' => 'images/products/iphone1-2.jpg',
                 'product_image3' => 'images/products/iphone1-3.jpg',
                 'product_image4' => 'images/products/iphone1-4.jpg',
                 'product_status' => 'available',
-                'product_category' => 'Graphite',
+                'product_category' => 'Green',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
