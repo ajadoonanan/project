@@ -30,4 +30,8 @@ Route::get('/store', [ProductController::class, 'index'])->name('store');
 
 Route::get('/details/{id}', [DetailsController::class, 'index'])->name('store.details');
 
-Route::get('/cart', [CartController::class, 'index'])->name('cart');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart');
+
+    Route::put('/cart', [CartController::class, 'store'])->name('cart.store');
+});
