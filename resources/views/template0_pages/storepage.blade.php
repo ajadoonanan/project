@@ -1,9 +1,12 @@
 <x-layouts.layout-template0>
 
 
-
     <section class="ftco-section bg-light">
         <div class="container">
+
+
+            <x-template0.search />
+
             <div class="row">
                 <div class="col-md-8 col-lg-10 order-md-last">
                     <div class="row">
@@ -72,36 +75,73 @@
                 </div>
             </div>
 
+
             <div class="col-md-4 col-lg-2 sidebar">
                 <div class="sidebar-box-2">
                     <h2 class="heading mb-4"><a href="#">Clothing</a></h2>
                     <ul>
-                        <li><a href="#">Shirts &amp; Tops</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Shorts &amp; Skirts</a></li>
-                        <li><a href="#">Jackets</a></li>
-                        <li><a href="#">Coats</a></li>
-                        <li><a href="#">Sleeveless</a></li>
-                        <li><a href="#">Trousers</a></li>
-                        <li><a href="#">Winter Coats</a></li>
-                        <li><a href="#">Jumpsuits</a></li>
+
+                        <li><a href="/store">All</a></li>
+
+                        @foreach ($category_details as $data)
+                        <li><a href="{{ route('store', ['category' => $data->product_category]) }}">{{
+                                $data->product_category }}</a></li>
+                        @endforeach
+
                     </ul>
                 </div>
+
+
                 <div class="sidebar-box-2">
-                    <h2 class="heading mb-4"><a href="#">Jeans</a></h2>
+                    <h2 class="heading mb-4"><a href="#">Sort</a></h2>
                     <ul>
-                        <li><a href="#">Shirts &amp; Tops</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Shorts &amp; Skirts</a></li>
-                        <li><a href="#">Jackets</a></li>
-                        <li><a href="#">Coats</a></li>
-                        <li><a href="#">Jeans</a></li>
-                        <li><a href="#">Sleeveless</a></li>
-                        <li><a href="#">Trousers</a></li>
-                        <li><a href="#">Winter Coats</a></li>
-                        <li><a href="#">Jumpsuits</a></li>
+                        <li><a href="/store">All</a></li>
+                        <li><a href="store?sort=title">Title (A-z)</a></li>
+                        <li><a href="store?sort=title-desc">Title (Z-a)</a></li>
+                        <li><a href="store?sort=price">Price (Lowest to Highest)</a></li>
+                        <li><a href="store?sort=price-desc">Price (Highest to Lowest)</a></li>
+
                     </ul>
                 </div>
+
+                <div class="sidebar-box-2">
+                    <h2 class="heading mb-4"><a href="#">Sort CODES</a></h2>
+                    <ul>
+                        <li><a href="/store">All</a></li>
+                        <li><a href="{{ route('store', ['sort' => 'title']) }}">Title (A-z)</a></li>
+                        <li><a href="{{ route('store', ['sort' => 'title-des']) }}">Title (Z-a)</a></li>
+                        <li><a href="{{ route('store', ['sort' => 'price']) }}">Price (Lowest to Highest)</a></li>
+                        <li><a href="{{ route('store', ['sort' => 'price-desc']) }}">Price (Highest to Lowest)</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="sidebar-box-2">
+                    <h2 class="heading mb-4"><a href="#">Filter</a></h2>
+                    <ul>
+                        <li><a href="/store">All</a></li>
+                        <li><a href="store?max_price=500">Price less than $500</a></li>
+                        <li><a href="store?max_price=1000">Price less than $1000</a></li>
+                        <li><a href="store?min_price=500">Price greater than $500</a></li>
+                        <li><a href="store?min_price=100">Price greater than $1000</a></li>
+
+                    </ul>
+                </div>
+
+
+                <div class="sidebar-box-2">
+                    <h2 class="heading mb-4"><a href="#">Filter CODES</a></h2>
+                    <ul>
+                        <li><a href="/store">All</a></li>
+                        <li><a href="{{ route('store', ['max_price' => '500']) }}">Price less than $500</a></li>
+                        <li><a href="{{ route('store', ['max_price' => '1000']) }}">Price less than $1000</a></li>
+                        <li><a href="{{ route('store', ['min_price' => '500']) }}">Price greater than $500</a></li>
+                        <li><a href="{{ route('store', ['min_price' => '1000']) }}">Price greater than $1000</a></li>
+
+                    </ul>
+                </div>
+
+
                 <div class="sidebar-box-2">
                     <h2 class="heading mb-2"><a href="#">Bags</a></h2>
                     <h2 class="heading mb-2"><a href="#">Accessories</a></h2>
