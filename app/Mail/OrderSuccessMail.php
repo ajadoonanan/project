@@ -14,16 +14,17 @@ class OrderSuccessMail extends Mailable
     use Queueable;
     use SerializesModels;
 
-    public $name;
-
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($name)
-    {
-        $this->name = $name;
+    public function __construct(
+        protected $name,
+        protected $messagebody,
+        protected $hello,
+        protected $user_products,
+    ) {
     }
 
     /**
@@ -45,6 +46,12 @@ class OrderSuccessMail extends Mailable
         return new Content(
             view: 'mail.order-success-mail',
             text: 'mail.order-success-mail-text',
+            with: [
+                'name' => $this->name,
+                'messagebody' => $this->messagebody,
+                'hello' => $this->hello,
+                'user_products' => $this->user_products,
+            ]
         );
     }
 

@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\CheckoutHelper;
+use App\Mail\OrderSuccessMail;
 use App\Models\Order;
 use App\Models\Order_product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class CheckoutSuccessController extends Controller
 {
@@ -83,5 +85,13 @@ class CheckoutSuccessController extends Controller
 
         // Remove all user cart products
         $user->products()->detach();
+
+        $name = $user->name;
+        $messagebody = 'Thank you for your purchase';
+        $hello = 'Hello';
+
+        // Mail::to($request->user()->send(new OrderShipped($order)),
+
+        Mail::to(Auth::user())->send(new OrderSuccessMail($name, $messagebody, $hello, $user_products));
     }
 }
