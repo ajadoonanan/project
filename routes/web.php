@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('homepage', 'template0_pages/homepage');
+// Route::view('homepage', 'template0_pages/homepage');
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,6 +28,8 @@ Route::get('/', function () {
 Auth::routes([
     'verify' => true,
 ]);
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -39,6 +41,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
     Route::put('/cart', [CartController::class, 'store'])->name('cart.store');
+
+    Route::delete('/cart/{id}', [CartController::class, 'destroy'])->name('cart.destroy');
+
+    Route::put('/cart/{id}', [CartController::class, 'update'])->name('cart.update');
 
     Route::get('/mail-testing', [MailController::class, 'index']);
 
