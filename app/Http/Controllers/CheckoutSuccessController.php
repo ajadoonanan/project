@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\CheckoutHelper;
+use App\Helpers\StripeHelper;
 use App\Mail\OrderSuccessMail;
 use App\Models\Order;
 use App\Models\Order_product;
@@ -40,6 +41,17 @@ class CheckoutSuccessController extends Controller
                     'payment' => 'none',
                     'payment_id' => 'none',
                 ];
+                $completed = true;
+                break;
+
+            case 'stripe':
+                // code...
+                $payment_object = new StripeHelper();
+                $checkout_order = $payment_object->getCheckoutOrder($id);
+                // dd($checkout_order);
+                $completed = $payment_object->isCheckoutCompleted($checkout_order);
+                $data = $payment_object->getPaymentDetails($checkout_order);
+
                 $completed = true;
                 break;
 
@@ -93,5 +105,7 @@ class CheckoutSuccessController extends Controller
         // Mail::to($request->user()->send(new OrderShipped($order)),
 
         Mail::to(Auth::user())->send(new OrderSuccessMail($name, $messagebody, $hello, $user_products));
+
+        // return redirect('/thanks')->with('message', 'Payment was successful');
     }
 }

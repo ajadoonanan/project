@@ -11,13 +11,13 @@ class CheckoutController extends Controller
     {
         $cart_details = Auth::user()->products;
 
-        $checkout = new CheckoutHelper($cart_details);
+        $checkoutcontroller = new CheckoutHelper($cart_details);
 
-        $checkout->calculateTotal();
+        $checkoutcontroller->calculateTotal();
 
-        return view('template0_pages/checkout', [
+        return view('template0_pages/checkoutpage', [
             'cart_details' => $cart_details,
-            'checkout' => $checkout,
+            'checkoutcontroller' => $checkoutcontroller,
         ]);
     }
 }

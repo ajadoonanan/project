@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\CheckoutStripeController;
 use App\Http\Controllers\CheckoutSuccessController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\MailController;
@@ -50,5 +51,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 
+    Route::post('/checkout/stripe', CheckoutStripeController::class)->name('checkout.stripe');
+
     Route::get('/checkout/success/{payment}/{id}', CheckoutSuccessController::class)->name('checkout.success');
+
+    Route::view('/thanks', 'template0_pages/thanks');
 });
