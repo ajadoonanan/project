@@ -24,7 +24,7 @@ class StripeHelper
 
     public function getCheckoutOrder($session_id)
     {
-        return $this->stripe->checkout_sessionstripe->checkout->sessions->retrieve(
+        return $this->stripe->checkout->sessions->retrieve(
             $session_id,
             []
         );

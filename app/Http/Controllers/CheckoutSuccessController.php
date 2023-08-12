@@ -106,6 +106,6 @@ class CheckoutSuccessController extends Controller
 
         Mail::to(Auth::user())->send(new OrderSuccessMail($name, $messagebody, $hello, $user_products));
 
-        // return redirect('/thanks')->with('message', 'Payment was successful');
+        return redirect('/thanks')->with('message', 'Payment was successful');
     }
 }
