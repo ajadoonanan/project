@@ -20,19 +20,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::view('homepage', 'template0_pages/homepage');
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes([
-    'verify' => true,
-]);
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/store', [ProductController::class, 'index'])->name('store');
 

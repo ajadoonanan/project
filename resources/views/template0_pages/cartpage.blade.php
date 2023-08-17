@@ -1,11 +1,9 @@
 <x-layouts.layout-template0>
 
 
-
-    @if(empty($cart_details))
-    <h1>Cart is empty</h1>
+    @if($cart_details->isEmpty())
+    <x-core.cart-empty />
     @else
-
 
 
     <section class="ftco-section ftco-cart">
