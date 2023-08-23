@@ -149,7 +149,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p><a href="#" class="btn btn-primary py-3 px-4">Place an order</a></p>
+
 
                                 <x-core.stripe-ui />
 
