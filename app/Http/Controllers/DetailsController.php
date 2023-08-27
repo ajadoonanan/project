@@ -10,7 +10,7 @@ class DetailsController extends Controller
     {
         $product_details = Product::find($id);
 
-        return view('template_pages/detailspage', [
+        return view('template0_pages/detailspage', [
             'data' => $product_details,
         ]);
     }

@@ -57,7 +57,7 @@
 
                 @auth
                 <li class="nav-item cta cta-colored"><a href="{{ route('cart') }}" class="nav-link"><span
-                            class="icon-shopping_cart"></span>[0]</a></li>
+                            class="icon-shopping_cart"></span>{{ $cartNumber }}</a></li>
                 @endauth
 
             </ul>

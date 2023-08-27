@@ -36,16 +36,9 @@
 <body class="goto-here">
 
 
-
-
     <!-- Start Navbar -->
     <x-template0.navbar cart-number=0 />
     <!-- End Navbar -->
-
-
-    <!-- Start Page Header -->
-    <x-template0.header />
-    <!-- End  Page Header -->
 
     <!-- Start Alert -->
     <x-core.alert />

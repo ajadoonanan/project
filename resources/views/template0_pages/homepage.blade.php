@@ -15,7 +15,9 @@
                             <div class="text">
                                 <span class="subheading">Winkel eCommerce Shop</span>
                                 <div class="horizontal">
-                                    <h3 class="vr" style="background-image: url(images/divider.jpg);">Stablished Since
+                                    <h3 class="vr"
+                                        style="background-image: url({{ asset('template0/images/divider.jpg') }});">
+                                        Stablished Since
                                         2000</h3>
                                     <h1 class="mb-4 mt-3">Catch Your Own <br><span>Stylish &amp; Look</span></h1>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary
@@ -42,7 +44,9 @@
                             <div class="text">
                                 <span class="subheading">Winkel eCommerce Shop</span>
                                 <div class="horizontal">
-                                    <h3 class="vr" style="background-image: url(images/divider.jpg);">Best eCommerce
+                                    <h3 class="vr"
+                                        style="background-image: url({{ asset('template0/images/divider.jpg') }});">Best
+                                        eCommerce
                                         Online Shop</h3>
                                     <h1 class="mb-4 mt-3">A Thouroughly <span>Modern</span> Woman</h1>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary

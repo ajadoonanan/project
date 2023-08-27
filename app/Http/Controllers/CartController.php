@@ -18,7 +18,7 @@ class CartController extends Controller
 
         $checkout->calculateTotal();
 
-        return view('template_pages/cartpage', [
+        return view('template0_pages/cartpage', [
             'cart_details' => $cart_details,
             'checkout' => $checkout,
         ]);

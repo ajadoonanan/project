@@ -5,16 +5,24 @@
         <div class="container">
 
 
-            <x-template0.search />
+            <x-core.search-custom />
 
             <div class="row">
                 <div class="col-md-8 col-lg-10 order-md-last">
+
+                    @if(empty($product_details) || $product_details->isEmpty())
+
+                    {{-- no results found --}}
+                    <x-core.store-empty />
+
+                    @else
+
+                    {{-- show products --}}
+
                     <div class="row">
 
 
                         @foreach ($product_details as $data)
-
-
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
                                 <a href="#" class="img-prod"><img class="img-fluid"
@@ -52,7 +60,6 @@
                                 </div>
                             </div>
                         </div>
-
                         @endforeach
 
 
@@ -75,6 +82,7 @@
                 </div>
             </div>
 
+            @endif
 
             <div class="col-md-4 col-lg-2 sidebar">
                 <div class="sidebar-box-2">
