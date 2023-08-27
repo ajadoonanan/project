@@ -20,15 +20,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//   return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/store', [ProductController::class, 'index'])->name('store');
 
@@ -51,5 +51,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/checkout/success/{payment}/{id}', CheckoutSuccessController::class)->name('checkout.success');
 
-    Route::view('/thanks', 'template0_pages/thanks');
+    Route::view('/thanks', 'template_pages/thanks');
 });
