@@ -47,7 +47,7 @@
                         </div>
                         <h3>{{
                             $data->product_title }}</h3>
-                        <p class="product-price"><span>Per Kg</span> 85$ </p>
+                        <p class="product-price"><span>Per Kg</span> ${{ $data->product_price }} </p>
                         <a href="{{ route('store.details', ['id'=> $data->id]) }}" class="cart-btn"><i
                                 class="fas fa-shopping-cart"></i> View</a>
                     </div>

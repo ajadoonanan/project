@@ -107,23 +107,20 @@
                                     <td>Product</td>
                                     <td>Total</td>
                                 </tr>
+
+                                @foreach ($cart_details as $data)
                                 <tr>
-                                    <td>Strawberry</td>
-                                    <td>$85.00</td>
+                                    <td>{{ $data->product_title }}</td>
+                                    <td>${{ $checkout->formatPrice($data->cartQuantityPrice()) }}</td>
                                 </tr>
-                                <tr>
-                                    <td>Berry</td>
-                                    <td>$70.00</td>
-                                </tr>
-                                <tr>
-                                    <td>Lemon</td>
-                                    <td>$35.00</td>
-                                </tr>
+
+                                @endforeach
+
                             </tbody>
                             <tbody class="checkout-details">
                                 <tr>
                                     <td>Subtotal</td>
-                                    <td>$190</td>
+                                    <td>${{ $checkout->getSubTotal() }}</td>
                                 </tr>
                                 <tr>
                                     <td>Shipping</td>
@@ -131,11 +128,12 @@
                                 </tr>
                                 <tr>
                                     <td>Total</td>
-                                    <td>$240</td>
+                                    <td>${{ $checkout->getTotal() }}</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="#" class="boxed-btn">Place Order</a>
+                        {{-- <a href="#" class="boxed-btn">Place Order</a> --}}
+                        <x-core.stripe-ui />
                     </div>
                 </div>
             </div>

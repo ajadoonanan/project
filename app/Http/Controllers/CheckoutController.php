@@ -15,9 +15,9 @@ class CheckoutController extends Controller
 
         $checkoutcontroller->calculateTotal();
 
-        return view('template0_pages/checkoutpage', [
+        return view('template_pages/checkoutpage', [
             'cart_details' => $cart_details,
-            'checkoutcontroller' => $checkoutcontroller,
+            'checkout' => $checkoutcontroller,
         ]);
     }
 }

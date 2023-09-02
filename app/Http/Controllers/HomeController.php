@@ -26,7 +26,7 @@ class HomeController extends Controller
         $random = $this->randomProducts();
         $recent = $this->recentProducts();
 
-        return view('template0_pages/homepage', [
+        return view('template_pages/homepage', [
             'random' => $random,
             'recent' => $recent,
         ]);

@@ -2,6 +2,7 @@
 
 
 
+
     <!-- breadcrumb-section -->
     <div class="breadcrumb-section breadcrumb-bg">
         <div class="container">
@@ -16,6 +17,11 @@
         </div>
     </div>
     <!-- end breadcrumb section -->
+
+
+    @if($cart_details->isEmpty())
+    <x-core.cart-empty />
+    @else
 
     <!-- cart -->
     <div class="cart-section mt-150 mb-150">
@@ -35,33 +41,48 @@
                                 </tr>
                             </thead>
                             <tbody>
+
+
+                                @foreach ($cart_details as $data)
+
+
                                 <tr class="table-body-row">
-                                    <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-                                    <td class="product-image"><img src="assets/img/products/product-img-1.jpg" alt="">
+                                    <td class="product-remove">
+                                        {{-- <a href="#"><i class="far fa-window-close"></i></a> --}}
+
+
+                                        <form action="{{ route('cart.destroy', ['id' => $data->pivot->id]) }}"
+                                            method="POST">
+                                            @method('DELETE')
+                                            @csrf
+
+
+
+                                            <button class="btn p-2" type="submit">
+                                                <i class="far fa-window-close"></i></button>
+
+                                            <input type="hidden" name="cart_id" value="{{ $data->pivot->id }}">
+                                            <input type="hidden" name="product" value="{{ $data->id }}">
+
+                                        </form>
+
+
                                     </td>
-                                    <td class="product-name">Strawberry</td>
-                                    <td class="product-price">$85</td>
-                                    <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                    <td class="product-total">1</td>
-                                </tr>
-                                <tr class="table-body-row">
-                                    <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-                                    <td class="product-image"><img src="assets/img/products/product-img-2.jpg" alt="">
+                                    <td class="product-image"><img src="{{ asset('storage/' . $data->product_image1) }}"
+                                            alt="">
                                     </td>
-                                    <td class="product-name">Berry</td>
-                                    <td class="product-price">$70</td>
-                                    <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                    <td class="product-total">1</td>
-                                </tr>
-                                <tr class="table-body-row">
-                                    <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-                                    <td class="product-image"><img src="assets/img/products/product-img-3.jpg" alt="">
+                                    <td class="product-name">{{ $data->product_title }}</td>
+                                    <td class="product-price">${{$checkout->formatPrice($data->product_price) }}</td>
+                                    <td class="product-quantity"><input type="number" placeholder="1"
+                                            value="{{ $data->pivot->cart_quantity }}"></td>
+                                    <td class="product-total">${{ $checkout->formatPrice($data->cartQuantityPrice()) }}
                                     </td>
-                                    <td class="product-name">Lemon</td>
-                                    <td class="product-price">$35</td>
-                                    <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                    <td class="product-total">1</td>
                                 </tr>
+
+                                @endforeach
+
+
+
                             </tbody>
                         </table>
                     </div>
@@ -79,21 +100,21 @@
                             <tbody>
                                 <tr class="total-data">
                                     <td><strong>Subtotal: </strong></td>
-                                    <td>$500</td>
+                                    <td>${{ $checkout->formatPrice($checkout->getSubtotal()) }}</td>
                                 </tr>
                                 <tr class="total-data">
                                     <td><strong>Shipping: </strong></td>
-                                    <td>$45</td>
+                                    <td>$Fee</td>
                                 </tr>
                                 <tr class="total-data">
                                     <td><strong>Total: </strong></td>
-                                    <td>$545</td>
+                                    <td>${{ $checkout->formatPrice($checkout->getTotal()) }}</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="cart-buttons">
                             <a href="cart.html" class="boxed-btn">Update Cart</a>
-                            <a href="checkout.html" class="boxed-btn black">Check Out</a>
+                            <a href="{{ route('checkout') }}" class="boxed-btn black">Check Out</a>
                         </div>
                     </div>
 
@@ -112,5 +133,6 @@
     </div>
     <!-- end cart -->
 
+    @endif
 
 </x-layouts.layout-template>

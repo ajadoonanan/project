@@ -15,7 +15,7 @@ class ProductController extends Controller
 
         $category_details = Product::select('product_category')->distinct()->get();
 
-        return view('template0_pages/storepage', [
+        return view('template_pages/storepage', [
             'product_details' => $product_details,
             'category_details' => $category_details,
         ]);
@@ -24,7 +24,7 @@ class ProductController extends Controller
 public function filterProducts(Request $request)
 {
     $params = $request->query();
-    $product_details = Product::where('id', '>', 1);
+    $product_details = Product::where('id', '>', 0);
 
     foreach ($params as $key => $value) {
         if (empty($value)) {

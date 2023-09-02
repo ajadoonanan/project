@@ -34,10 +34,19 @@
                             cum voluptatem quae reprehenderit repudiandae ea tempora incidunt ipsa, quisquam animi
                             perferendis eos eum modi! Tempora, earum.</p>
                         <div class="single-product-form">
-                            <form action="index.html">
-                                <input type="number" placeholder="0">
+                            <form action="{{ route('cart') }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <input name="cart_quantity" type="number" value="1">
+
+                                <button type="submit" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to
+                                    Cart</button>
+
+                                <input type="hidden" name="product_id" value="{{ $data->id }}">
+
                             </form>
-                            <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            {{-- <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to
+                                Cart</a> --}}
                             <p><strong>Categories: </strong>Fruits, Organic</p>
                         </div>
                         <h4>Share:</h4>

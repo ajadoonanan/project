@@ -33,6 +33,33 @@
     <!-- responsive -->
     <link rel="stylesheet" href="{{ asset('template/assets/css/responsive.css') }}">
 
+    <style>
+        .single-product-form button.cart-btn {
+            margin-bottom: 15px;
+        }
+
+        button.cart-btn {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            background-color: #F28123;
+            color: #fff;
+            padding: 10px 20px;
+            border: 1px solid #F28123;
+        }
+
+        button.cart-btn {
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+        button.boxed-btn,
+        button.bordered-btn,
+        button.cart-btn {
+            border-radius: 50px;
+        }
+    </style>
+
 </head>
 
 <body>
