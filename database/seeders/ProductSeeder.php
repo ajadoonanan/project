@@ -16,88 +16,8 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
             [
-                'product_title' => 'iPhone 13 Pro Graphite - 256GB',
-                'product_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta reiciendis odio consequuntur sunt magnam eum facilis quaerat dolor aperiam labore facere amet officiis, unde quae distinctio earum culpa omnis soluta voluptate tempora placeat?.',
-                'product_price' => '6000.00',
-                'product_quantity' => 100,
-                'product_image1' => 'images/products/iphone1-2.jpg',
-                'product_image2' => 'images/products/iphone1-1.jpg',
-                'product_image3' => 'images/products/iphone1-3.jpg',
-                'product_image4' => 'images/products/iphone1-4.jpg',
-                'product_status' => 'available',
-                'product_category' => 'Graphite',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'product_title' => 'Samsung Galaxy S23 Ultra',
-                'product_description' => '
-
-                <table cellspacing="0">
-    <tbody>
-        <tr>
-            <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
-            <td>Android 13, One UI 5.1</td>
-        </tr>
-        <tr>
-            <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
-            <td>Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)</td>
-        </tr>
-        <tr>
-            <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
-            <td>Octa-core (1x3.36 GHz Cortex-X3 &amp; 2x2.8 GHz Cortex-A715 &amp; 2x2.8 GHz Cortex-A710 &amp; 3x2.0 GHz Cortex-A510)</td>
-        </tr>
-        <tr>
-            <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
-            <td>Adreno 740</td>
-        </tr>
-    </tbody>
-</table>
-
-                ',
-                'product_price' => '6000.00',
-                'product_quantity' => 100,
-                'product_image1' => 'images/products/galaxy-s23-ultra.jpg',
-                'product_image2' => 'images/products/iphone1-2.jpg',
-                'product_image3' => 'images/products/iphone1-3.jpg',
-                'product_image4' => 'images/products/iphone1-4.jpg',
-                'product_status' => 'available',
-                'product_category' => 'Silver',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'product_title' => 'iPhone 13 Pro Gold - 256GB',
-                'product_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta reiciendis odio consequuntur sunt magnam eum facilis quaerat dolor aperiam labore facere amet officiis, unde quae distinctio earum culpa omnis soluta voluptate tempora placeat?.',
-                'product_price' => '1099.00',
-                'product_quantity' => 100,
-                'product_image1' => 'images/products/iphone1-3.jpg',
-                'product_image2' => 'images/products/iphone1-1.jpg',
-                'product_image3' => 'images/products/iphone1-2.jpg',
-                'product_image4' => 'images/products/iphone1-4.jpg',
-                'product_status' => 'available',
-                'product_category' => 'Gold',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'product_title' => 'iPhone 12 Red - 256GB',
-                'product_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta reiciendis odio consequuntur sunt magnam eum facilis quaerat dolor aperiam labore facere amet officiis, unde quae distinctio earum culpa omnis soluta voluptate tempora placeat?.',
-                'product_price' => '849.00',
-                'product_quantity' => 100,
-                'product_image1' => 'images/products/iphone1-3.jpg',
-                'product_image2' => 'images/products/iphone1-1.jpg',
-                'product_image3' => 'images/products/iphone1-2.jpg',
-                'product_image4' => 'images/products/iphone1-4.jpg',
-                'product_status' => 'available',
-                'product_category' => 'Red',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
                 'product_title' => 'Samsung Galaxy A12',
                 'product_description' => '
-
                 <table cellspacing="0">
     <tbody>
         <tr>
@@ -118,44 +38,190 @@ class ProductSeeder extends Seeder
         </tr>
     </tbody>
 </table>
-
                 ',
-                'product_price' => '649.00',
+                'product_price' => '1100.00',
                 'product_quantity' => 100,
-                'product_image1' => 'images/products/iphone1-2.jpg',
+                'product_image1' => 'images/products/galaxy-a121.jpg',
                 'product_image2' => 'images/products/iphone1-1.jpg',
                 'product_image3' => 'images/products/iphone1-3.jpg',
                 'product_image4' => 'images/products/iphone1-4.jpg',
                 'product_status' => 'available',
-                'product_category' => 'Purple',
+                'product_category' => 'Samsung',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'product_title' => 'iPhone Test',
-                'product_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta reiciendis odio consequuntur sunt magnam eum facilis quaerat dolor aperiam labore facere amet officiis, unde quae distinctio earum culpa omnis soluta voluptate tempora placeat?.',
-                'product_price' => '20.00',
+                'product_title' => 'Samsung Galaxy A24',
+                'product_description' => '
+                <table cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
+                        <td>Android 13, One UI 5.1</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
+                        <td>Mediatek MT8781 Helio G99 (6nm)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
+                        <td>Octa-core (2x2.2 GHz Cortex-A76 &amp; 6x2.0 GHz Cortex-A55)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
+                        <td>Mali-G57 MC2</td>
+                    </tr>
+                </tbody>
+            </table>
+                ',
+                'product_price' => '1700.00',
                 'product_quantity' => 100,
-                'product_image1' => 'images/products/iphone1-2.jpg',
-                'product_image2' => 'images/products/iphone1-1.jpg',
-                'product_image3' => 'images/products/iphone1-3.jpg',
-                'product_image4' => 'images/products/iphone1-4.jpg',
-                'product_status' => 'available',
-                'product_category' => 'Purple',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'product_title' => 'iPhone 13 Pro Max Silver - 256GB',
-                'product_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dicta reiciendis odio consequuntur sunt magnam eum facilis quaerat dolor aperiam labore facere amet officiis, unde quae distinctio earum culpa omnis soluta voluptate tempora placeat?.',
-                'product_price' => '1199.66',
-                'product_quantity' => 100,
-                'product_image1' => 'images/products/iphone1-1.jpg',
+                'product_image1' => 'images/products/galaxy-a241.jpg',
                 'product_image2' => 'images/products/iphone1-2.jpg',
                 'product_image3' => 'images/products/iphone1-3.jpg',
                 'product_image4' => 'images/products/iphone1-4.jpg',
                 'product_status' => 'available',
-                'product_category' => 'Silver',
+                'product_category' => 'Samsung',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'product_title' => 'Apple iPhone 11 Pro',
+                'product_description' => '
+                <table cellspacing="0">
+    <tbody>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
+            <td>iOS 13, upgradable to iOS 16.6, planned upgrade to iOS 17</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
+            <td>Apple A13 Bionic (7 nm+)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
+            <td>Hexa-core (2x2.65 GHz Lightning + 4x1.8 GHz Thunder)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
+            <td>Apple GPU (4-core graphics)</td>
+        </tr>
+    </tbody>
+</table>
+                ',
+                'product_price' => '4070.00',
+                'product_quantity' => 100,
+                'product_image1' => 'images/products/iphone-11-pro1.jpg',
+                'product_image2' => 'images/products/iphone1-1.jpg',
+                'product_image3' => 'images/products/iphone1-2.jpg',
+                'product_image4' => 'images/products/iphone1-4.jpg',
+                'product_status' => 'available',
+                'product_category' => 'Apple',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'product_title' => 'Apple iPhone XR',
+                'product_description' => '
+                <table cellspacing="0">
+    <tbody>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
+            <td>iOS 12, upgradable to iOS 16.6</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
+            <td>Apple A12 Bionic (7 nm)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
+            <td>Hexa-core (2x2.5 GHz Vortex + 4x1.6 GHz Tempest)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
+            <td>Apple GPU (4-core graphics)</td>
+        </tr>
+    </tbody>
+</table>
+                ',
+                'product_price' => '2280.00',
+                'product_quantity' => 100,
+                'product_image1' => 'images/products/iphone-xr1.jpg',
+                'product_image2' => 'images/products/iphone1-1.jpg',
+                'product_image3' => 'images/products/iphone1-2.jpg',
+                'product_image4' => 'images/products/iphone1-4.jpg',
+                'product_status' => 'available',
+                'product_category' => 'Apple',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'product_title' => 'Huawei P60 Pro',
+                'product_description' => '
+                <table cellspacing="0">
+    <tbody>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
+            <td>HarmonyOS 3.1 (China), EMUI 13.1 (Europe), no Google Play Services</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
+            <td>Qualcomm SM8475 Snapdragon 8+ Gen 1 4G (4 nm)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
+            <td>Octa-core (1x3.19 GHz Cortex-X2 &amp; 3x2.75 GHz Cortex-A710 &amp; 4x2.0 GHz Cortex-A510)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
+            <td>Adreno 730</td>
+        </tr>
+    </tbody>
+</table>
+                ',
+                'product_price' => '6700.00',
+                'product_quantity' => 100,
+                'product_image1' => 'images/products/p60-pro1.jpg',
+                'product_image2' => 'images/products/iphone1-1.jpg',
+                'product_image3' => 'images/products/iphone1-3.jpg',
+                'product_image4' => 'images/products/iphone1-4.jpg',
+                'product_status' => 'available',
+                'product_category' => 'Huawei',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'product_title' => 'Huawei Y5p',
+                'product_description' => '
+                <table cellspacing="0">
+    <tbody>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
+            <td>Android 10, EMUI 10.1, no Google Play Services</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
+            <td>Mediatek MT6762R Helio P22 (12 nm)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
+            <td>Octa-core (4x2.0 GHz Cortex-A53 &amp; 4x1.5 GHz Cortex-A53)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
+            <td>PowerVR GE8320</td>
+        </tr>
+    </tbody>
+</table>
+                ',
+                'product_price' => '810.00',
+                'product_quantity' => 100,
+                'product_image1' => 'images/products/y5p1.jpg',
+                'product_image2' => 'images/products/iphone1-1.jpg',
+                'product_image3' => 'images/products/iphone1-3.jpg',
+                'product_image4' => 'images/products/iphone1-4.jpg',
+                'product_status' => 'available',
+                'product_category' => 'Huawei',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
