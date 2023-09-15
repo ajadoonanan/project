@@ -51,6 +51,41 @@ class ProductSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
+                'product_title' => 'Samsung Galaxy F14',
+                'product_description' => '
+                <table cellspacing="0">
+    <tbody>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
+            <td>Android 13, One UI Core 5.1</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
+            <td>Exynos 1330 (5nm)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
+            <td>Octa-core (2x2.4 GHz Cortex-A78 &amp; 6x2.0 GHz Cortex-A55)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
+            <td>Mali-G68 MP2</td>
+        </tr>
+    </tbody>
+</table>
+                ',
+                'product_price' => '1080.00',
+                'product_quantity' => 100,
+                'product_image1' => 'images/products/galaxy-f14.jpg',
+                'product_image2' => 'images/products/iphone1-1.jpg',
+                'product_image3' => 'images/products/iphone1-3.jpg',
+                'product_image4' => 'images/products/iphone1-4.jpg',
+                'product_status' => 'available',
+                'product_category' => 'Samsung',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'product_title' => 'Samsung Galaxy A24',
                 'product_description' => '
                 <table cellspacing="0">
@@ -82,6 +117,41 @@ class ProductSeeder extends Seeder
                 'product_image4' => 'images/products/iphone1-4.jpg',
                 'product_status' => 'available',
                 'product_category' => 'Samsung',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'product_title' => 'Apple iPhone 13 Pro',
+                'product_description' => '
+                <table cellspacing="0">
+    <tbody>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
+            <td>iOS 15, upgradable to iOS 16.6.1, planned upgrade to iOS 17</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
+            <td>Apple A15 Bionic (5 nm)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
+            <td>Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
+            <td>Apple GPU (5-core graphics)</td>
+        </tr>
+    </tbody>
+</table>
+                ',
+                'product_price' => '5340.00',
+                'product_quantity' => 100,
+                'product_image1' => 'images/products/galaxy-f14.jpg',
+                'product_image2' => 'images/products/iphone1-1.jpg',
+                'product_image3' => 'images/products/iphone1-3.jpg',
+                'product_image4' => 'images/products/iphone1-4.jpg',
+                'product_status' => 'available',
+                'product_category' => 'Apple',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -152,6 +222,41 @@ class ProductSeeder extends Seeder
                 'product_image4' => 'images/products/iphone1-4.jpg',
                 'product_status' => 'available',
                 'product_category' => 'Apple',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'product_title' => 'Huawei Nova 8 SE',
+                'product_description' => '
+                <table cellspacing="0">
+    <tbody>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=os">OS</a></td>
+            <td>Android 10, EMUI 10.1, no Google Play Services</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=chipset">Chipset</a></td>
+            <td>Mediatek MT6853 Dimensity 720 (7 nm) - standard model<br>Mediatek MT6853 Dimensity 800U (7 nm) - premium model</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=cpu">CPU</a></td>
+            <td>Octa-core (2x2.0 GHz Cortex-A76 &amp; 6x2.0 GHz Cortex-A55) - standard model<br>Octa-core (2x2.4 GHz Cortex-A76 &amp; 6x2.0 GHz Cortex-A55) - premium model</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.gsmarena.com/glossary.php3?term=gpu">GPU</a></td>
+            <td>Mali-G57 MC3</td>
+        </tr>
+    </tbody>
+</table>
+                ',
+                'product_price' => '2300.00',
+                'product_quantity' => 100,
+                'product_image1' => 'images/products/galaxy-f14.jpg',
+                'product_image2' => 'images/products/iphone1-1.jpg',
+                'product_image3' => 'images/products/iphone1-3.jpg',
+                'product_image4' => 'images/products/iphone1-4.jpg',
+                'product_status' => 'available',
+                'product_category' => 'Huawei',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
