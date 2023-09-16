@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="breadcrumb-text">
-                        <p>Fresh and Organic</p>
+                        <p>TNTCELLULAR</p>
                         <h1>Shop</h1>
                     </div>
                 </div>
@@ -18,6 +18,37 @@
     <!-- end breadcrumb section -->
 
     <x-core.search-custom />
+
+
+    <div class="col-md-4 col-lg-2 sidebar">
+        <div class="sidebar-box-2">
+            <h2 class="heading mb-4"><a href="#">Sort</a></h2>
+            <ul>
+                <li><a href="/store">All</a></li>
+                <li><a href="store?sort=title">Title (A-z)</a></li>
+                <li><a href="store?sort=title-desc">Title (Z-a)</a></li>
+                <li><a href="store?sort=price">Price (Lowest to Highest)</a></li>
+                <li><a href="store?sort=price-desc">Price (Highest to Lowest)</a></li>
+
+            </ul>
+        </div>
+
+
+        <div class="sidebar-box-2">
+            <h2 class="heading mb-4"><a href="#">Filter</a></h2>
+            <ul>
+                <li><a href="/store">All</a></li>
+                <li><a href="store?max_price=1000">Price less than $1000</a></li>
+                <li><a href="store?max_price=2000">Price less than $2000</a></li>
+                <li><a href="store?min_price=2000">Price greater than $2000</a></li>
+                <li><a href="store?min_price=5000">Price greater than $5000</a></li>
+
+            </ul>
+        </div>
+
+
+    </div>
+
 
     <!-- products -->
     <div class="product-section mt-150 mb-150">
@@ -47,6 +78,8 @@
             </div> -->
 
             <div class="row product-lists">
+
+
 
 
                 @foreach ($product_details as $data)

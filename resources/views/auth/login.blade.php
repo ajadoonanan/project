@@ -1,4 +1,17 @@
-<x-layouts.layout-template0-login>
+<x-layouts.layout-template>
+
+    <div class="breadcrumb-section breadcrumb-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <div class="breadcrumb-text">
+                        <p>TNTCELLULAR</p>
+                        <h1>Welcome</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <style>
@@ -8,8 +21,8 @@
         }
 
         .bg-image {
-            background-image: url('https://res.cloudinary.com/dxfq3iotg/image/upload/v1561631318/img-123.jpg');
-            background-size: cover;
+            background-image: url('https://epe.brightspotcdn.com/dims4/default/2766e46/2147483647/strip/true/crop/2084x1414+37+0/resize/840x570!/format/webp/quality/90/?url=https%3A%2F%2Fepe-brightspot.s3.amazonaws.com%2F00%2F43%2F1bebdc514ff9a9f1987f7e3d7f02%2Fcellphones-1198516602.jpg');
+            background-size: center;
             background-position: center center
         }
     </style>
@@ -87,4 +100,4 @@
     </div>
 
 
-</x-layouts.layout-template0-login>
+</x-layouts.layout-template>
