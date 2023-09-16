@@ -4,21 +4,22 @@
 
 
     <!-- header -->
-    <div class="top-header-area" id="sticker">
+    <!-- <div class="top-header-area" id="sticker">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12 text-center">
-                    <div class="main-menu-wrap">
-                        <!-- logo -->
-                        <div class="site-logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo.png" alt="">
-                            </a>
-                        </div>
-                        <!-- logo -->
+                    <div class="main-menu-wrap"> -->
 
-                        <!-- menu start -->
-                        <nav class="main-menu">
+    <!-- logo -->
+    <!--<div class="site-logo">
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="">
+        </a>
+    </div> -->
+    <!-- logo -->
+
+    <!-- menu start -->
+    <!--<nav class="main-menu">
                             <ul>
                                 <li class="current-list-item"><a href="#">Home</a>
                                     <ul class="sub-menu">
@@ -64,12 +65,12 @@
                             </ul>
                         </nav>
                         <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-                        <div class="mobile-menu"></div>
-                        <!-- menu end -->
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <div class="mobile-menu"></div> -->
+    <!--menu end -->
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
     <!-- end header -->
 
@@ -207,11 +208,11 @@
     <!-- end product section -->
 
     <!-- cart banner section -->
-    <section class="cart-banner pt-100 pb-100">
+    <!-- <section class="cart-banner pt-100 pb-100">
         <div class="container">
-            <div class="row clearfix">
-                <!--Image Column-->
-                <div class="image-column col-lg-6">
+            <div class="row clearfix"> -->
+    <!--Image Column-->
+    <!-- <div class="image-column col-lg-6">
                     <div class="image">
                         <div class="price-box">
                             <div class="inner-price">
@@ -222,16 +223,18 @@
                         </div>
                         <img src="assets/img/a.jpg" alt="">
                     </div>
-                </div>
-                <!--Content Column-->
-                <div class="content-column col-lg-6">
+                </div> -->
+
+    <!--Content Column-->
+    <!-- <div class="content-column col-lg-6">
                     <h3><span class="orange-text">Deal</span> of the month</h3>
                     <h4>Hikan Strwaberry</h4>
                     <div class="text">Quisquam minus maiores repudiandae nobis, minima saepe id, fugit ullam similique!
                         Beatae, minima quisquam molestias facere ea. Perspiciatis unde omnis iste natus error sit
-                        voluptatem accusant</div>
-                    <!--Countdown Timer-->
-                    <div class="time-counter">
+                        voluptatem accusant</div> -->
+
+    <!--Countdown Timer-->
+    <!-- <div class="time-counter">
                         <div class="time-countdown clearfix" data-countdown="2020/2/01">
                             <div class="counter-column">
                                 <div class="inner"><span class="count">00</span>Days</div>
@@ -246,16 +249,17 @@
                                 <div class="inner"><span class="count">00</span>Secs</div>
                             </div>
                         </div>
-                    </div>
-                    <a href="cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div> -->
+
+    <!-- <a href="cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- end cart banner section -->
 
     <!-- testimonail-section -->
-    <div class="testimonail-section mt-150 mb-150">
+    <!-- <div class="testimonail-section mt-150 mb-150">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 text-center">
@@ -312,11 +316,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end testimonail-section -->
 
     <!-- advertisement section -->
-    <div class="abt-section mb-150">
+    <!-- <div class="abt-section mb-150">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
@@ -339,7 +343,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end advertisement section -->
 
     <!-- shop banner -->
@@ -353,7 +357,7 @@
     <!-- end shop banner -->
 
     <!-- latest news -->
-    <div class="latest-news pt-150 pb-150">
+    <!-- <div class="latest-news pt-150 pb-150">
         <div class="container">
 
             <div class="row">
@@ -428,7 +432,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end latest news -->
 
     <!-- logo carousel -->

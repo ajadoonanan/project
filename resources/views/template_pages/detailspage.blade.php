@@ -29,7 +29,7 @@
                 <div class="col-md-7">
                     <div class="single-product-content">
                         <h3>{{ $data->product_title }}</h3>
-                        <p class="single-product-pricing"><span>Per Kg</span> ${{ $data->product_price }}</p>
+                        <p class="single-product-pricing"><span>Per Kg</span> TTD {{ $data->product_price }}</p>
                         <p>{!! $data->product_description !!}</p>
                         <div class="single-product-form">
                             <form action="{{ route('cart') }}" method="POST">

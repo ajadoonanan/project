@@ -28,7 +28,7 @@
                     <!--end of col-->
                     <div class="col">
                         <input name="search" class="form-control-lg form-control-borderless" type="search"
-                            placeholder="Search topics or keywords">
+                            placeholder="Topics or keywords">
                     </div>
                     <!--end of col-->
                     <div class="col-auto">

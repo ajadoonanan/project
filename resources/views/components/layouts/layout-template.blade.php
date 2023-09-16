@@ -9,7 +9,7 @@
         content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
     <!-- title -->
-    <title>Shop</title>
+    <!-- <title>Shop</title> -->
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="{{ asset('template/assets/img/favicon.png') }}">
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('template/assets/css/main.css') }}">
     <!-- responsive -->
     <link rel="stylesheet" href="{{ asset('template/assets/css/responsive.css') }}">
+
 
     <style>
         .single-product-form button.cart-btn {
@@ -64,6 +65,8 @@
 
 <body>
 
+
+
     <!--PreLoader-->
     <div class="loader">
         <div class="loader-inner">
@@ -88,15 +91,18 @@
 
                         <!-- menu start -->
                         <nav class="main-menu">
+
                             <ul>
                                 <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
-
-
                                 <li class="nav-item"><a href="{{ route('store') }}" class="nav-link">Shop</a></li>
+
+                                @guest
                                 <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
                                 <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a>
                                 </li>
+                                @endguest
 
+                                @auth
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                   document.getElementById('logout-form').submit();">
@@ -106,15 +112,16 @@
                                         @csrf
                                     </form>
                                 </li>
-
                                 <li>
                                     <div class="header-icons">
                                         <a class="shopping-cart" href="{{ route('cart') }}"><i
                                                 class="fas fa-shopping-cart"></i>[0]</a>
-
                                     </div>
                                 </li>
+                                @endauth
+
                             </ul>
+
                         </nav>
                         <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                         <div class="mobile-menu"></div>
