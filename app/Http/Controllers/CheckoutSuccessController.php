@@ -99,8 +99,8 @@ class CheckoutSuccessController extends Controller
         $user->products()->detach();
 
         $name = $user->name;
-        $messagebody = 'Thank you for your purchase';
-        $hello = 'Hello';
+        $messagebody = 'Please come again soon.';
+        $hello = 'Hi ';
 
         // Mail::to($request->user()->send(new OrderShipped($order)),
 

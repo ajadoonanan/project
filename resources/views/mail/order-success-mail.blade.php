@@ -148,8 +148,12 @@
                                             width="125" height="120" style="display: block; border: 0px;" /><br>
                                         <h1
                                             style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;">
-                                            {{ $hello }} {{ $name }} {{ $messagebody }}
+                                            {{ $hello }} {{ $name }}
                                         </h1>
+                                        <h2
+                                            style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;">
+                                            Thank you For Your Order
+                                        </h2>
                                     </td>
                                 </tr>
                                 <tr>
@@ -157,8 +161,7 @@
                                         style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 10px;">
                                         <p
                                             style="font-size: 16px; font-weight: 400; line-height: 24px; color: #777777;">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium iste
-                                            ipsa numquam odio dolores, nam.
+                                            {{ $messagebody }}
                                         </p>
                                     </td>
                                 </tr>

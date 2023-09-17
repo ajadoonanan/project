@@ -10,8 +10,8 @@ class MailController extends Controller
 {
     public function index()
     {
-        $name = 'Anil';
-        $messagebody = 'Messagebody Worked, Congratulations!!!';
+        $name = 'Anil Anil';
+        $messagebody = 'Thank you for your purchase';
         $hello = 'Hello';
         $user_products = Auth::user()->products;
 
