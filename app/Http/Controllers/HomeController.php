@@ -25,25 +25,34 @@ class HomeController extends Controller
     {
         $random = $this->randomProducts();
         $recent = $this->recentProducts();
+        $best_selling_products = $this->bestSellingProducts();
+
+        // dd($best_selling_products);
 
         return view('template_pages/homepage', [
             'random' => $random,
             'recent' => $recent,
+            'best_selling_products' => $best_selling_products,
         ]);
     }
 
     public function randomProducts()
     {
-        return DB::table('products')->inRandomOrder()->limit(4)->get();
+        return DB::table('products')->inRandomOrder()->limit(3)->get();
     }
 
     public function recentProducts()
     {
-        return DB::table('products')->orderBy('created_at', 'desc')->limit(4)->get();
+        return DB::table('products')->orderBy('created_at', 'desc')->limit(3)->get();
     }
 
     public function bestSellingProducts()
     {
-        return true;
+        return DB::table('order_product')->limit(3)
+         ->select(DB::raw('*, SUM(order_product_quantity) as quantity_sold'))
+         ->join('products', 'order_product.product_id', '=', 'products.id')
+         ->groupBy('product_id')
+         ->orderByRaw('quantity_sold DESC')
+         ->get();
     }
 }

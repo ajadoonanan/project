@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="breadcrumb-text">
-                        <p>Fresh and Organic</p>
+                        <p>TNTCELLULAR</p>
                         <h1>Check Out Product</h1>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                                 @foreach ($cart_details as $data)
                                 <tr>
                                     <td>{{ $data->product_title }}</td>
-                                    <td>${{ $checkout->formatPrice($data->cartQuantityPrice()) }}</td>
+                                    <td>TTD {{ $checkout->formatPrice($data->cartQuantityPrice()) }}</td>
                                 </tr>
 
                                 @endforeach
@@ -120,15 +120,15 @@
                             <tbody class="checkout-details">
                                 <tr>
                                     <td>Subtotal</td>
-                                    <td>${{ $checkout->getSubTotal() }}</td>
+                                    <td>TTD {{ $checkout->getSubTotal() }}</td>
                                 </tr>
                                 <tr>
                                     <td>Shipping</td>
-                                    <td>$50</td>
+                                    <td>TTD 0.00</td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>
-                                    <td>${{ $checkout->getTotal() }}</td>
+                                    <td>TTD {{ $checkout->getTotal() }}</td>
                                 </tr>
                             </tbody>
                         </table>

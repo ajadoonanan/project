@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="breadcrumb-text">
-                        <p>Fresh and Organic</p>
+                        <p>TNTCELLULAR</p>
                         <h1>Cart</h1>
                     </div>
                 </div>
@@ -72,10 +72,11 @@
                                             alt="">
                                     </td>
                                     <td class="product-name">{{ $data->product_title }}</td>
-                                    <td class="product-price">${{$checkout->formatPrice($data->product_price) }}</td>
+                                    <td class="product-price">TTD {{$checkout->formatPrice($data->product_price) }}</td>
                                     <td class="product-quantity"><input type="number" placeholder="1"
                                             value="{{ $data->pivot->cart_quantity }}"></td>
-                                    <td class="product-total">${{ $checkout->formatPrice($data->cartQuantityPrice()) }}
+                                    <td class="product-total">TTD {{ $checkout->formatPrice($data->cartQuantityPrice())
+                                        }}
                                     </td>
                                 </tr>
 
@@ -100,25 +101,25 @@
                             <tbody>
                                 <tr class="total-data">
                                     <td><strong>Subtotal: </strong></td>
-                                    <td>${{ $checkout->formatPrice($checkout->getSubtotal()) }}</td>
+                                    <td>TTD {{ $checkout->formatPrice($checkout->getSubtotal()) }}</td>
                                 </tr>
                                 <tr class="total-data">
                                     <td><strong>Shipping: </strong></td>
-                                    <td>$Fee</td>
+                                    <td>TTD 0.00</td>
                                 </tr>
                                 <tr class="total-data">
                                     <td><strong>Total: </strong></td>
-                                    <td>${{ $checkout->formatPrice($checkout->getTotal()) }}</td>
+                                    <td>TTD {{ $checkout->formatPrice($checkout->getTotal()) }}</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="cart-buttons">
-                            <a href="cart.html" class="boxed-btn">Update Cart</a>
+                            <a href="{{ route('store') }}" class="boxed-btn">Continue to Shop</a>
                             <a href="{{ route('checkout') }}" class="boxed-btn black">Check Out</a>
                         </div>
                     </div>
 
-                    <div class="coupon-section">
+                    {{-- <div class="coupon-section">
                         <h3>Apply Coupon</h3>
                         <div class="coupon-form-wrap">
                             <form action="index.html">
@@ -126,7 +127,7 @@
                                 <p><input type="submit" value="Apply"></p>
                             </form>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

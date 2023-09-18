@@ -236,7 +236,7 @@
     <!-- end footer -->
 
     <!-- copyright -->
-    <div class="copyright">
+    <!-- <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
@@ -258,7 +258,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end copyright -->
 
     <!-- jquery -->
