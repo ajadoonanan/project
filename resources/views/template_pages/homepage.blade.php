@@ -67,15 +67,15 @@
                         <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                         <div class="mobile-menu"></div> -->
     <!--menu end -->
+    {{-- </div>
     </div>
     </div>
     </div>
-    </div>
-    </div>
+    </div> --}}
     <!-- end header -->
 
     <!-- search area -->
-    <div class="search-area">
+    {{-- <div class="search-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -90,7 +90,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- end search area -->
 
     <!-- hero area -->
@@ -102,6 +102,7 @@
                         <div class="hero-text-tablecell">
                             <p class="subtitle">Welcome To</p>
                             <h1>TNTCELLULAR</h1>
+
                             {{-- <div class="hero-btns">
                                 <a href="shop.html" class="boxed-btn">Fruit Collection</a>
                                 <a href="contact.html" class="bordered-btn">Contact Us</a>
@@ -159,7 +160,7 @@
     <!-- end features list section -->
 
     <!-- product section -->
-    <div class="product-section mt-150 mb-150">
+    <div class="product-section mt-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
@@ -197,7 +198,7 @@
         </div>
     </div>
 
-    <div class="product-section mt-150 mb-150">
+    <div class="product-section mt-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">

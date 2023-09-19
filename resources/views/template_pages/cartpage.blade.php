@@ -10,7 +10,7 @@
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="breadcrumb-text">
                         <p>TNTCELLULAR</p>
-                        <h1>Cart</h1>
+                        <h1>Shopping Cart</h1>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                         <table class="cart-table">
                             <thead class="cart-table-head">
                                 <tr class="table-head-row">
-                                    <th class="product-remove"></th>
+                                    <th class="product-remove">Remove</th>
                                     <th class="product-image">Product Image</th>
                                     <th class="product-name">Name</th>
                                     <th class="product-price">Price</th>
@@ -55,8 +55,6 @@
                                             method="POST">
                                             @method('DELETE')
                                             @csrf
-
-
 
                                             <button class="btn p-2" type="submit">
                                                 <i class="far fa-window-close"></i></button>

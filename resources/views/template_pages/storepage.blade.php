@@ -51,7 +51,7 @@
 
 
     <!-- products -->
-    <div class="product-section mt-150 mb-150">
+    <div class="product-section">
 
         @if(empty($product_details) || $product_details->isEmpty())
 

@@ -134,7 +134,7 @@
     <!-- end header -->
 
     <!-- search area -->
-    <div class="search-area">
+    <!-- <div class="search-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -149,7 +149,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end search arewa -->
 
 

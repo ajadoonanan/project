@@ -34,7 +34,7 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => 'Anil 1',
+                'name' => 'Anil',
                 'email' => 'anil1@mail.com',
                 'password' => Hash::make('Password1'),
                 'email_verified_at' => Carbon::now(),
