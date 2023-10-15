@@ -72,11 +72,11 @@
 <body style="margin: 0 !important; padding: 0 !important; background-color: #eeeeee;" bgcolor="#eeeeee">
 
 
-    <div
+    <!-- <div
         style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Open Sans, Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
         For what reason would it be advisable for me to think about business content? That might be little bit risky to
         have crew member like them.
-    </div>
+    </div> -->
 
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
@@ -95,13 +95,14 @@
                                             style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 36px; font-weight: 800; line-height: 48px;"
                                             class="mobile-center">
                                             <h1 style="font-size: 36px; font-weight: 800; margin: 0; color: #ffffff;">
-                                                BBBootstrap</h1>
+                                                TNTCELLULAR</h1>
                                         </td>
                                     </tr>
                                 </table>
                             </div>
 
-                            <div style="display:inline-block; max-width:50%; min-width:100px; vertical-align:top; width:100%;"
+                            {{-- <div
+                                style="display:inline-block; max-width:50%; min-width:100px; vertical-align:top; width:100%;"
                                 class="mobile-hide">
                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%"
                                     style="max-width:300px;">
@@ -132,7 +133,7 @@
                                         </td>
                                     </tr>
                                 </table>
-                            </div>
+                            </div> --}}
 
                         </td>
                     </tr>
@@ -156,7 +157,7 @@
                                         </h2>
                                     </td>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                     <td align="left"
                                         style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 10px;">
                                         <p
@@ -164,7 +165,7 @@
                                             {{ $messagebody }}
                                         </p>
                                     </td>
-                                </tr>
+                                </tr> --}}
                                 <tr>
                                     <td align="left" style="padding-top: 20px;">
                                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -178,7 +179,7 @@
                                                     2345678
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            {{-- <tr>
                                                 <td width="75%" align="left"
                                                     style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
                                                     Purchased Item (1)
@@ -207,13 +208,13 @@
                                                     style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
                                                     $5.00
                                                 </td>
-                                            </tr>
+                                            </tr> --}}
                                         </table>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td align="left" style="padding-top: 20px;">
-                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        {{-- <table cellspacing="0" cellpadding="0" border="0" width="100%">
                                             <tr>
                                                 <td width="75%" align="left"
                                                     style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
@@ -224,125 +225,88 @@
                                                     $115.00
                                                 </td>
                                             </tr>
-                                        </table>
+                                        </table> --}}
 
 
-                                        <h1>The products you purchased</h1>
+                                        <h3>Products purchased</h3>
 
                                         @foreach ($user_products as $data )
+
                                         <hr>
                                         {{ $data->product_title }}
-
                                         <hr>
 
                                         @endforeach
 
-
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" height="100%" valign="top" width="100%"
-                            style="padding: 0 35px 35px 35px; background-color: #ffffff;" bgcolor="#ffffff">
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                style="max-width:660px;">
-                                <tr>
-                                    <td align="center" valign="top" style="font-size:0;">
-                                        <div
-                                            style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
-
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                                style="max-width:300px;">
-                                                <tr>
-                                                    <td align="left" valign="top"
-                                                        style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
-                                                        <p style="font-weight: 800;">Delivery Address</p>
-                                                        <p>675 Massachusetts Avenue<br>11th Floor<br>Cambridge, MA 02139
-                                                        </p>
-
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div
-                                            style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                                style="max-width:300px;">
-                                                <tr>
-                                                    <td align="left" valign="top"
-                                                        style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
-                                                        <p style="font-weight: 800;">Estimated Delivery Date</p>
-                                                        <p>January 1st, 2016</p>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="100%" valign="top" width="100%"
+                style="padding: 0 35px 35px 35px; background-color: #ffffff;" bgcolor="#ffffff">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:660px;">
                     <tr>
-                        <td align="center" style=" padding: 35px; background-color: #ff7361;" bgcolor="#1b9ba3">
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                style="max-width:600px;">
-                                <tr>
-                                    <td align="center"
-                                        style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
-                                        <h2
-                                            style="font-size: 24px; font-weight: 800; line-height: 30px; color: #ffffff; margin: 0;">
-                                            Get 30% off your next order.
-                                        </h2>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center" style="padding: 25px 0 15px 0;">
-                                        <table border="0" cellspacing="0" cellpadding="0">
-                                            <tr>
-                                                <td align="center" style="border-radius: 5px;" bgcolor="#66b3b7">
-                                                    <a href="#" target="_blank"
-                                                        style="font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #F44336; padding: 15px 30px; border: 1px solid #F44336; display: block;">Shop
-                                                        Again</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td align="center" valign="top" style="font-size:0;">
+                            <div
+                                style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
+
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                    style="max-width:300px;">
+                                    <tr>
+                                        <td align="left" valign="top"
+                                            style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
+                                            <p style="font-weight: 800;">Delivery Address</p>
+                                            <p>675 Massachusetts Avenue<br>11th Floor<br>Cambridge, MA 02139
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div
+                                style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                    style="max-width:300px;">
+                                    <tr>
+                                        <td align="left" valign="top"
+                                            style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
+                                            <p style="font-weight: 800;">Estimated Delivery Date</p>
+                                            <p>January 1st, 2016</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style=" padding: 35px; background-color: #ff7361;" bgcolor="#1b9ba3">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                    <tr>
+                        <td align="center"
+                            style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
+                            <h2
+                                style="font-size: 24px; font-weight: 800; line-height: 30px; color: #ffffff; margin: 0;">
+                                Get 30% off your next order.
+                            </h2>
                         </td>
                     </tr>
                     <tr>
-                        <td align="center" style="padding: 35px; background-color: #ffffff;" bgcolor="#ffffff">
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                style="max-width:600px;">
+                        <td align="center" style="padding: 25px 0 15px 0;">
+                            <table border="0" cellspacing="0" cellpadding="0">
                                 <tr>
-                                    <td align="center">
-                                        <img src="logo-footer.png" width="37" height="37"
-                                            style="display: block; border: 0px;" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center"
-                                        style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; padding: 5px 0 10px 0;">
-                                        <p
-                                            style="font-size: 14px; font-weight: 800; line-height: 18px; color: #333333;">
-                                            675 Parko Avenue<br>
-                                            LA, CA 02232
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="left"
-                                        style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px;">
-                                        <p
-                                            style="font-size: 14px; font-weight: 400; line-height: 20px; color: #777777;">
-                                            If you didn't create an account using this email address, please ignore this
-                                            email or <a href="#" target="_blank"
-                                                style="color: #777777;">unsusbscribe</a>.
-                                        </p>
+                                    <td align="center" style="border-radius: 5px;" bgcolor="#66b3b7">
+                                        <a href="#" target="_blank"
+                                            style="font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #F44336; padding: 15px 30px; border: 1px solid #F44336; display: block;">Shop
+                                            Again</a>
                                     </td>
                                 </tr>
                             </table>
@@ -351,6 +315,38 @@
                 </table>
             </td>
         </tr>
+        <tr>
+            <td align="center" style="padding: 35px; background-color: #ffffff;" bgcolor="#ffffff">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                    <tr>
+                        <td align="center">
+                            <img src="logo-footer.png" width="37" height="37" style="display: block; border: 0px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center"
+                            style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; padding: 5px 0 10px 0;">
+                            <p style="font-size: 14px; font-weight: 800; line-height: 18px; color: #333333;">
+                                675 Parko Avenue<br>
+                                LA, CA 02232
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left"
+                            style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px;">
+                            <p style="font-size: 14px; font-weight: 400; line-height: 20px; color: #777777;">
+                                If you didn't create an account using this email address, please ignore this
+                                email or <a href="#" target="_blank" style="color: #777777;">unsusbscribe</a>.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </td>
+    </tr>
     </table>
 
 </body>

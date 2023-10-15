@@ -98,7 +98,7 @@
                         <table class="order-details">
                             <thead>
                                 <tr>
-                                    <th>Your order Details</th>
+                                    <th>Order Details</th>
                                     <th>Price</th>
                                 </tr>
                             </thead>
@@ -120,7 +120,7 @@
                             <tbody class="checkout-details">
                                 <tr>
                                     <td>Subtotal</td>
-                                    <td>TTD {{ $checkout->getSubTotal() }}</td>
+                                    <td>TTD {{ $checkout->getSubTotal() }}.00</td>
                                 </tr>
                                 <tr>
                                     <td>Shipping</td>
@@ -128,7 +128,7 @@
                                 </tr>
                                 <tr>
                                     <td>Total</td>
-                                    <td>TTD {{ $checkout->getTotal() }}</td>
+                                    <td>TTD {{ $checkout->getTotal() }}.00</td>
                                 </tr>
                             </tbody>
                         </table>
