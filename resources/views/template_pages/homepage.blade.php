@@ -103,10 +103,10 @@
                             <p class="subtitle">Welcome To</p>
                             <h1>TNTCELLULAR</h1>
 
-                            {{-- <div class="hero-btns">
-                                <a href="shop.html" class="boxed-btn">Fruit Collection</a>
+                            <div class="hero-btns">
+                                <a href="shop.html" class="boxed-btn">About Us</a>
                                 <a href="contact.html" class="bordered-btn">Contact Us</a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>

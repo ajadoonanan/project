@@ -33,7 +33,6 @@
     <!-- responsive -->
     <link rel="stylesheet" href="{{ asset('template/assets/css/responsive.css') }}">
 
-
     <style>
         .single-product-form button.cart-btn {
             margin-bottom: 15px;
