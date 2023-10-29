@@ -113,7 +113,7 @@
                         </table>
                         <div class="cart-buttons">
                             <a href="{{ route('store') }}" class="boxed-btn">Continue to Shop</a>
-                            <a href="{{ route('checkout') }}" class="boxed-btn black">Check Out</a>
+                            <a href="{{ route('checkout') }}" class="boxed-btn black">Checkout</a>
                         </div>
                     </div>
 
