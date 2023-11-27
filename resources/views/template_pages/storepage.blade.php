@@ -60,43 +60,27 @@
 
                 @else
 
-                <!-- <div class="row">
-                            <div class="col-md-12"> -->
-                <!--<div class="product-filters">
-                                    <ul>
-                                        <li class="active" data-filter="*">All</li>
-                                        <li data-filter=".strawberry">Strawberry</li>
-                                        <li data-filter=".berry">Berry</li>
-                                        <li data-filter=".lemon">Lemon</li>
-                                    </ul>
-                                </div> -->
-                <!-- </div>
-                            </div> -->
+                <div class="row product-lists" style="width: 130%;">
 
+                    @foreach ($product_details as $data)
 
-                    <div class="row product-lists" style="width: 130%;">
-
-                        @foreach ($product_details as $data)
-
-                        <div class="col-lg-4 col-md-6 text-center strawberry" style="">
-                            <div style="height: 500px; width: 400px;" class="single-product-item">
-                                <div class="product-image">
-                                    <a href="{{ route('store.details', ['id'=> $data->id]) }}"><img
-                                            src="{{ asset('storage/' . $data->product_image1) }}" alt=""></a>
-                                </div>
-                                <h3>{{
-                                    $data->product_title }}</h3>
-                                <p class="product-priace">TTD {{ $data->product_price }} </p>
-                                <a href="{{ route('store.details', ['id'=> $data->id]) }}" class="cart-btn"><i
-                                        class="fas fa-shopping-cart"></i> View</a>
+                    <div class="col-lg-4 col-md-6 text-center strawberry" style="">
+                        <div style="height: 500px; width: 400px;" class="single-product-item">
+                            <div class="product-image">
+                                <a href="{{ route('store.details', ['id'=> $data->id]) }}"><img
+                                        src="{{ asset('storage/' . $data->product_image1) }}" alt=""></a>
                             </div>
+                            <h3>{{
+                                $data->product_title }}</h3>
+                            <p class="product-priace">TTD {{ $data->product_price }} </p>
+                            <a href="{{ route('store.details', ['id'=> $data->id]) }}" class="cart-btn"><i
+                                    class="fas fa-shopping-cart"></i> View</a>
                         </div>
-
-                        @endforeach
-
-
-
                     </div>
+
+                    @endforeach
+
+                </div>
 
                 @endif
                 <!-- end products -->

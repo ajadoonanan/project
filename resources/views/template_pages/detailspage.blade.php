@@ -43,17 +43,7 @@
                                 <input type="hidden" name="product_id" value="{{ $data->id }}">
 
                             </form>
-                            {{-- <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to
-                                Cart</a> --}}
-                            {{-- <p><strong>Categories: </strong>Fruits, Organic</p> --}}
                         </div>
-                        {{-- <h4>Share:</h4> --}}
-                        {{-- <ul class="product-share">
-                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                        </ul> --}}
                     </div>
                 </div>
             </div>
