@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-md-4 col-lg-2 sidebar">
             <div class="sidebar-box-2">
-                <h2 class="heading mb-4"><a href="#">Sort</a></h2>
+                <h3 class="heading mb-2"><a href="#">Sort</a></h3>
                 <ul>
                     <li><a href="/store">All</a></li>
                     <li><a href="store?sort=title">Title (A-z)</a></li>
@@ -36,7 +36,7 @@
 
 
             <div class="sidebar-box-2">
-                <h2 class="heading mb-4"><a href="#">Filter</a></h2>
+                <h3 class="heading mb-2"><a href="#">Filter</a></h3>
                 <ul>
                     <li><a href="/store">All</a></li>
                     <li><a href="store?max_price=1000">Price less than $1000</a></li>
@@ -118,6 +118,31 @@
         </div>
     </div>
     <!-- end logo carousel -->
+
+
+
+    <script type='text/javascript'>
+        (function(I, L, T, i, c, k, s) {
+            if(I.iticks) return;
+            I.iticks = {
+                host:c,
+                settings:s,
+                clientId:k,
+                cdn:L,
+                queue:[]
+            };
+            var h = T.head || T.documentElement;
+            var e = T.createElement(i);
+            var l = I.location;
+            e.async = true;
+            e.src = (L||c)+'/client/inject-v2.min.js';
+            h.insertBefore(e, h.firstChild);
+            I.iticks.call = function(a, b) {
+                I.iticks.queue.push([a, b]);
+            };
+        })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', '5ajhSjN5jBavRzuXR_c', {});
+    </script>
+
 
 
 </x-layouts.layout-template>
