@@ -54,4 +54,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/checkout/success/{payment}/{id}', CheckoutSuccessController::class)->name('checkout.success');
 
     Route::view('/thanks', 'template_pages/thanks');
+
+    Route::post('/checkout/points', [CheckoutController::class, 'points'])->name('checkout.points');
 });

@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -72,5 +73,15 @@ class User extends Authenticatable implements MustVerifyEmail
     public function groups(): BelongsTo
     {
         return $this->belongsTo(Group::class, 'group_id');
+    }
+
+    public function scopeUpdatePointsExchanged(Builder $query, int $user_id, int $points = 0)
+    {
+        $query->where('id', $user_id)->decrement('total_points', $points);
+    }
+
+    public function scopeUpdatePointsGained(Builder $query, int $user_id, int $points = 0)
+    {
+        $query->where('id', $user_id)->increment('total_points', $points);
     }
 }
