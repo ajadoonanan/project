@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\CheckoutHelper;
+use App\Helpers\PointsHelper;
 use App\Helpers\StripeClient;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -27,9 +28,19 @@ class CheckoutStripeController extends Controller
 
         header('Content-Type: application/json');
 
+        $points_helper = new PointsHelper();
+        $discount_id = $points_helper->getCouponForStripe();
+        $coupons = 'allow_promotion_codes';
+        $coupons_value = true;
+        if (!empty($discount_id)) {
+            $coupons = 'discounts';
+            $coupons_value = [['coupon' => $discount_id]];
+        }
+
         // Source: https://stripe.com/docs/payments/accept-a-payment
 
         $checkout_session = $stripe->checkout->sessions->create([
+            $coupons => $coupons_value,
             'line_items' => [[
                 'price_data' => [
                     'currency' => 'usd',

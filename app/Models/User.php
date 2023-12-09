@@ -53,6 +53,17 @@ class User extends Authenticatable implements MustVerifyEmail
         'password' => 'hashed',
     ];
 
+    // ====================SCOPES====================
+    public function scopeUpdatePointsExchanged(Builder $query, int $user_id, int $points = 0)
+    {
+        $query->where('id', $user_id)->decrement('total_points', $points);
+    }
+
+    public function scopeUpdatePointsGained(Builder $query, int $user_id, int $points = 0)
+    {
+        $query->where('id', $user_id)->increment('total_points', $points);
+    }
+
     /**
      * The products that belong to the User.
      */
@@ -62,6 +73,7 @@ class User extends Authenticatable implements MustVerifyEmail
         ->withPivot('id', 'user_id', 'cart_quantity');
     }
 
+    // ====================RELATIONSHIPS====================
     /**
      * Get all of the orders for the User.
      */
@@ -73,15 +85,5 @@ class User extends Authenticatable implements MustVerifyEmail
     public function groups(): BelongsTo
     {
         return $this->belongsTo(Group::class, 'group_id');
-    }
-
-    public function scopeUpdatePointsExchanged(Builder $query, int $user_id, int $points = 0)
-    {
-        $query->where('id', $user_id)->decrement('total_points', $points);
-    }
-
-    public function scopeUpdatePointsGained(Builder $query, int $user_id, int $points = 0)
-    {
-        $query->where('id', $user_id)->increment('total_points', $points);
     }
 }

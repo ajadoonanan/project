@@ -135,6 +135,9 @@
 
     {{ $slot }}
 
+    <!-- Start Alert -->
+    <x-core.alert />
+    <!-- End Alert -->
 
 
     <!-- logo carousel -->
@@ -164,6 +167,7 @@
         </div>
     </div>
     <!-- end logo carousel -->
+
 
     <!-- footer -->
     <div class="footer-area">

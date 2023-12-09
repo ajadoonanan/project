@@ -124,16 +124,18 @@
                                 </tr>
                                 <tr>
                                     <td>Shipping</td>
-                                    <td>TTD 0.00</td>
+                                    <td>Free</td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>
                                     <td>TTD {{ $checkout->getTotal() }}.00</td>
                                 </tr>
+
                             </tbody>
                         </table>
                         {{-- <a href="#" class="boxed-btn">Place Order</a> --}}
                         <x-core.stripe-ui />
+                        @include('template_pages.points-display')
                     </div>
                 </div>
             </div>

@@ -140,14 +140,14 @@ class PointsHelper
     {
         // Modify stripe checkout
         // Get points exchanged in session
-        // $points_exchanged = session('points_exchanged', 0);
-        // if ($points_exchanged) {
-        //     // Get reward from DB
-        //     $reward = PointsDiscount::where('points_needed', $points_exchanged)->first();
+        $points_exchanged = session('points_exchanged', 0);
+        if ($points_exchanged) {
+            // Get reward from DB
+            $reward = PointsDiscount::where('points_needed', $points_exchanged)->first();
 
-        //     return $reward->stripe_discount_id;
-        // } else {
-        //     return '';
-        // }
+            return $reward->stripe_discount_id;
+        } else {
+            return '';
+        }
     }
 }

@@ -9,5 +9,7 @@ class PointsDiscount extends Model
 {
     use HasFactory;
 
-    protected $table = 'points_multiplier';
+    protected $table = 'points_discounts';
+
+    protected $primaryKey = 'id';
 }
