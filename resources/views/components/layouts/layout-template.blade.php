@@ -136,7 +136,7 @@
     {{ $slot }}
 
     <!-- Start Alert -->
-    <x-core.alert />
+    <!-- <x-core.alert /> -->
     <!-- End Alert -->
 
 

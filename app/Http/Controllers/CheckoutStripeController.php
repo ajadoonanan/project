@@ -29,9 +29,9 @@ class CheckoutStripeController extends Controller
         header('Content-Type: application/json');
 
         $points_helper = new PointsHelper();
-        $discount_id = $points_helper->getCouponForStripe();
         $coupons = 'allow_promotion_codes';
         $coupons_value = true;
+        $discount_id = $points_helper->getCouponForStripe();
         if (!empty($discount_id)) {
             $coupons = 'discounts';
             $coupons_value = [['coupon' => $discount_id]];

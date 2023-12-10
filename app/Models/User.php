@@ -59,7 +59,7 @@ class User extends Authenticatable implements MustVerifyEmail
         $query->where('id', $user_id)->decrement('total_points', $points);
     }
 
-    public function scopeUpdatePointsGained(Builder $query, int $user_id, int $points = 0)
+    public function scopeUpdateUserPointsGained(Builder $query, int $user_id, int $points = 0)
     {
         $query->where('id', $user_id)->increment('total_points', $points);
     }

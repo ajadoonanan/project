@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\CheckoutHelper;
+use App\Helpers\PointsHelper;
 use App\Helpers\StripeHelper;
 use App\Mail\OrderSuccessMail;
 use App\Models\Order;
 use App\Models\Order_product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -91,6 +93,13 @@ class CheckoutSuccessController extends Controller
                 ])
             );
         });
+        // Points file
+        $points_helper = new PointsHelper();
+        $user_group_id = $user->groups->id;
+        $points_helper->setValues($data['total'], $user->total_points, $user_group_id);
+        $order->points_gained = $points_helper->getPointsGained();
+        User::updateUserPointsGained($user->id, $order->points_gained)->get();
+        $points_helper->clearPointsSession();
 
         // insert all records for order_products
         $order->order_product()->saveMany($records);

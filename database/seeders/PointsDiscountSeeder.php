@@ -15,14 +15,14 @@ class PointsDiscountSeeder extends Seeder
     {
         DB::table('points_discounts')->insert([
             [
-                'points_needed' => 100,
+                'points_needed' => 1000,
                 'points_discount_percent' => 10,
                 'stripe_discount_id' => 'Mbj3gx5m',
                 'created_at' => Carbon::now(),
                 'updated_at' => null,
             ],
             [
-                'points_needed' => 20,
+                'points_needed' => 2000,
                 'points_discount_percent' => 20,
                 'stripe_discount_id' => 'tZmnlInb',
                 'created_at' => Carbon::now(),
