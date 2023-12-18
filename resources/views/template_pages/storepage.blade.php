@@ -121,7 +121,7 @@
 
 
 
-    <script type='text/javascript'>
+    <!-- <script type='text/javascript'>
         (function(I, L, T, i, c, k, s) {
             if(I.iticks) return;
             I.iticks = {
@@ -141,7 +141,7 @@
                 I.iticks.queue.push([a, b]);
             };
         })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', '5ajhSjN5jBavRzuXR_c', {});
-    </script>
+    </script> -->
 
 
 

@@ -81,11 +81,11 @@
                 <div class="col-lg-12 col-sm-12 text-center">
                     <div class="main-menu-wrap">
                         <!-- logo -->
-                        <div class="site-logo">
+                        <!-- <div class="site-logo">
                             <a href="index.html">
                                 <img src="assets/img/logo.png" alt="">
                             </a>
-                        </div>
+                        </div> -->
                         <!-- logo -->
 
                         <!-- menu start -->
