@@ -57,7 +57,9 @@
                                             @csrf
 
                                             <button class="btn p-2" type="submit">
-                                                <i class="far fa-window-close"></i></button>
+                                                <!--<i class="far fa-window-close">Remove</i></button>-->
+                                                <i class="boxed-btn">Remove</i>
+                                            </button>
 
                                             <input type="hidden" name="cart_id" value="{{ $data->pivot->id }}">
                                             <input type="hidden" name="product" value="{{ $data->id }}">
@@ -71,8 +73,23 @@
                                     </td>
                                     <td class="product-name">{{ $data->product_title }}</td>
                                     <td class="product-price">TTD {{$checkout->formatPrice($data->product_price) }}</td>
-                                    <td class="product-quantity"><input type="number" placeholder="1"
-                                            value="{{ $data->pivot->cart_quantity }}"></td>
+
+                                    <td class="quantity">
+                                        <form action="{{ route('cart.update', ['id' => $data->pivot->id]) }}"
+                                            method="POST">
+                                            @method('PUT')
+                                            @csrf
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="cart_quantity"
+                                                    class="quantity form-control input-number"
+                                                    value="{{ $data->pivot->cart_quantity }}" min="1" max="100">
+                                                <button class="btn px-2"><span class="ion-ios-refresh"></span></button>
+                                            </div>
+                                            <input type="hidden" value="{{ $data->pivot->id }}" name="cart_id">
+                                            <input type="hidden" value="{{ $data->id }}" name="product_id">
+                                        </form>
+                                    </td>
+
                                     <td class="product-total">TTD {{ $checkout->formatPrice($data->cartQuantityPrice())
                                         }}
                                     </td>
@@ -103,7 +120,7 @@
                                 </tr>
                                 <tr class="total-data">
                                     <td><strong>Shipping: </strong></td>
-                                    <td>TTD 0.00</td>
+                                    <td>Free</td>
                                 </tr>
                                 <tr class="total-data">
                                     <td><strong>Total: </strong></td>
