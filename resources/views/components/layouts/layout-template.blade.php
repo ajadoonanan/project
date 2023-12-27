@@ -111,12 +111,9 @@
                                         @csrf
                                     </form>
                                 </li>
-                                <li>
-                                    <div class="header-icons">
-                                        <a class="shopping-cart" href="{{ route('cart') }}"><i
-                                                class="fas fa-shopping-cart"></i>[0]</a>
-                                    </div>
-                                </li>
+
+                                <x-template.navbar cartNumber=0 />
+
                                 @endauth
 
                             </ul>
