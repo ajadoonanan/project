@@ -33,8 +33,8 @@ class OrderSuccessMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Order Success Mail',
-            from: new Address('ecommerce.sales@mail.com', 'Ecommerce Sales'),
+            subject: 'Order Completed Successfully',
+            from: new Address('tntcellular.sales@mail.com', 'TNTCELLULAR'),
         );
     }
 
