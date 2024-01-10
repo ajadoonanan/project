@@ -48,7 +48,7 @@
 
                                 <tr class="table-body-row">
                                     <td class="product-remove">
-                                        {{-- <a href="#"><i class="far fa-window-close"></i></a> --}}
+
 
 
                                         <form action="{{ route('cart.destroy', ['id' => $data->pivot->id]) }}"
@@ -57,7 +57,7 @@
                                             @csrf
 
                                             <button class="btn p-2" type="submit">
-                                                <!--<i class="far fa-window-close">Remove</i></button>-->
+
                                                 <i class="boxed-btn">Remove</i>
                                             </button>
 

@@ -39,10 +39,10 @@
                 <h3 class="heading mb-2"><a href="#">Filter</a></h3>
                 <ul>
                     <li><a href="/store">All</a></li>
-                    <li><a href="store?max_price=1000">Price less than $1000</a></li>
+                    <!--<li><a href="store?max_price=1000">Price less than $1000</a></li>-->
                     <li><a href="store?max_price=2000">Price less than $2000</a></li>
                     <li><a href="store?min_price=2000">Price greater than $2000</a></li>
-                    <li><a href="store?min_price=5000">Price greater than $5000</a></li>
+                    <!--<li><a href="store?min_price=5000">Price greater than $5000</a></li>-->
 
                 </ul>
             </div>

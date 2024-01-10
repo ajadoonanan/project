@@ -99,13 +99,13 @@
                             <thead>
                                 <tr>
                                     <th>Order Details</th>
-                                    <th>Price</th>
+                                    <!--<th>Price</th>-->
                                 </tr>
                             </thead>
                             <tbody class="order-details-body">
                                 <tr>
                                     <td>Product</td>
-                                    <td>Total</td>
+                                    <td>Price</td>
                                 </tr>
 
                                 @foreach ($cart_details as $data)
