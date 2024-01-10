@@ -9,7 +9,7 @@
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="breadcrumb-text">
                         <p>TNTCELLULAR</p>
-                        <h1>Shop</h1>
+                        <h1>Our Products</h1>
                     </div>
                 </div>
             </div>
